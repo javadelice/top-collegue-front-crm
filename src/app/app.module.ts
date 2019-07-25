@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { LogginComponent } from './loggin/loggin.component';
+import { RouterModule} from '@angular/router';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LogginComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
