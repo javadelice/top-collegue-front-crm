@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {CollegueAuth} from './';
 
 @Component({
   selector: 'app-loggin',
@@ -9,6 +10,8 @@ export class LogginComponent implements OnInit {
 
   loggedInMode: boolean = false;
   constructor() { }
+
+  @Input() col: CollegueAuth = new CollegueAuth();
 
   ngOnInit() {
     this.loggedInMode = false;
