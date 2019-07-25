@@ -10,11 +10,13 @@ import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LogginComponent,
     MenuComponent
+
   ],
   imports: [
     BrowserModule,
