@@ -1,0 +1,30 @@
+<div class="container">
+  <form (ngSubmit)="submit()" #cpltForm="ngForm">
+  <div class="row">
+    <img src="http://fr.web.img6.acsta.net/c_215_290/pictures/15/08/12/12/24/179903.jpg" class="rounded" alt="photoID">
+    <!--<img src="{{collegueParticipant.pictureUrl}}" class="rounded mx-auto d-block" height="200" class="card-img" alt="photoID">-->
+  </div>
+  <div class="row">
+    <div class="col">
+    <p>Souhaitez-vous changer votre photo pour le concours?</p>
+  </div>
+    <div class="col">
+    <div *ngIf="modifierUrl==true; else elseBlock1">
+      <input type="text" [(ngModel)]="modifPictureUrl" name="pictureUrl" #champPicture="ngModel">
+      <div *ngIf="champPicture.invalid">
+          Url invalide
+      </div>
+    </div>
+    <ng-template #elseBlock1><p>PhotoUrl:</p></ng-template>
+    <!--<ng-template #elseBlock1>{{ collegueParticipant.pictureUrl }}</ng-template>-->
+</div>
+<div class="col">
+  <button (click)="modifier()">Modifier</button>
+</div>
+</div>
+ <div class="row">
+    <button (click)="inscription()">Participer</button>
+  </div>
+</form>
+  </div>
+
