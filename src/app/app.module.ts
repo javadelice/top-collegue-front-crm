@@ -7,6 +7,7 @@ import { RouterModule} from '@angular/router';
 import { ROUTES } from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MenuComponent } from './menu/menu.component';
     BrowserModule,
     NgbModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
