@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InscriptionComponent implements OnInit {
 
-  modifPictureUrl:string;
-  modifierUrl:boolean=false;
+  modifPictureUrl: string;
+  modifierUrl = false;
 
   constructor() { }
 

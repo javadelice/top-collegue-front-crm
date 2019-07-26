@@ -12,3 +12,12 @@ export class CollegueParticipant {
   }
 
   }
+
+export class CollegueParticipantVotes {
+    constructor( public firstName?: string,
+                 public lastName?: string,
+                 public photoUrl?: string) {
+
+    }
+  }
+
