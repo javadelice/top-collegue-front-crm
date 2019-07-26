@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {AuthService} from 'src/app/services/auth.service';
 import {UserConnected} from './models/UserConnected';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,14 @@ import {UserConnected} from './models/UserConnected';
 export class AppComponent implements OnInit {
 
   title = 'top-collegue-front-crm';
+  colSub: Subscription;
   connectedCol: UserConnected;
 
   constructor(private http: HttpClient, private router: Router, private authService: AuthService) {
   }
 
   ngOnInit() {
-    this.authService.abonnemenCollegueConnecte()
+    this.colSub = this.authService.abonnemenCollegueConnecte()
     .subscribe(
       col => {
         this.connectedCol = col;

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
-import {Observable, of, Subject} from 'rxjs';
+import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {flatMap, map, tap} from 'rxjs/operators';
 import {UserConnected} from '../models/UserConnected';
@@ -12,7 +12,7 @@ import {UserConnected} from '../models/UserConnected';
 export class AuthService {
 
   public connected = false;
-  subCollegueConnecte = new Subject<UserConnected>();
+  subCollegueConnecte = new BehaviorSubject<UserConnected>(null);
   URL_BACKEND = environment.backendUrl;
 
   constructor(private httpClient: HttpClient, private router: Router) { }

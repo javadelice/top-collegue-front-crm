@@ -52,6 +52,7 @@ export class LogginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
+          this.authenticationService.publier(data);
           this.authenticationService.getMe()
             .subscribe((user: UserConnected) => {
               if (user.status === 'SUSCRIBED' ) {
