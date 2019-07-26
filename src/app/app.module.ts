@@ -1,24 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { LogginComponent } from './loggin/loggin.component';
-import { RouterModule} from '@angular/router';
-import { ROUTES } from './app.routes';
-import { MenuComponent } from './menu/menu.component';
-
+import { ClassementComponent } from './classement/classement.component';
+//import { InscriptionComponent } from './inscription/inscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogginComponent,
-    MenuComponent
-
+    //InscriptionComponent
+    ClassementComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule,
-    RouterModule.forRoot(ROUTES)
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

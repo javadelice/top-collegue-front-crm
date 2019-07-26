@@ -1,0 +1,39 @@
+<!--<div ng-app="orderByScore" ng-controller="CollegueParticipantCtrl">
+
+    <table class="collegu">
+      <tr>
+          <th>
+              <p>Score</p>
+            </th>
+            <th>
+          <p>Telephone</p>
+        </th>
+        <th>
+          <p>Participant</p>
+        </th>
+      </tr>
+
+      <tr ng-repeat="collegue in collegue | orderBy: '-score'">
+        <td>{{collegue.score}}</td>
+        <td>{{collegue.phone}}</td>
+        <td>{{collegue.identite}}</td>
+      </tr>
+    </table>
+  </div>-->
+
+  <table class="table table-striped">
+      <thead>
+          <tr>
+            <th scope="col">Score</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Nom Participant</th>
+            </tr>
+            </thead>
+      <tbody>
+        <tr *ngFor="let collegue of collegues; index as i">
+          <td>{{collegue.score}}</td>
+          <td>{{collegue.phone}}</td>
+          <td>{{collegue.name}}</td>
+        </tr>
+      </tbody>
+    </table>
