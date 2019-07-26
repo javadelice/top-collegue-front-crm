@@ -24,11 +24,11 @@ export class DataService {
     return this.subCollegueParticipant.asObservable();
   }
 
-  /*getAllColleguePhotos(): Observable<CollegueParticipant[]> {
+  getAllColleguePhotos(): Observable<CollegueParticipant[]> {
     return this.httpClient
       .get<CollegueParticipant[]>(this.URL_BACKEND + '/votes', {
         withCredentials: true
       });
-  }*/
+  }
 
 }

@@ -8,14 +8,14 @@
   <div class="row card-body text-center">
     <div class="row text-center mx-2">
 
-      <div class="card border-info mb-3 text-center" style="max-width: 18rem;">
+      <div class="card border-info mb-3 text-center" style="max-width: 18rem;" *ngFor="let collegue of colleguesParticipants">
 
         <div class="card-header text-center">
-          <h4> Prénom Nom</h4>
+          <h4> {{collegue.firstName}} {{collegue.lastname | uppercase}}</h4>
         </div>
         <div class="card-body text-info text-center">
           <p class="card-text"><a> <img
-                src="https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2019/03/avatar-publicity_still-h_2019.jpg"
+                src="{{collegue.pictureUrl}}"
                 width="250" height="160"></a></p>
 
         </div>

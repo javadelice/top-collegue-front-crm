@@ -13,8 +13,8 @@ export class VotesComponent implements OnInit {
   colleguesParticipants = [];
 
   ngOnInit() {
-    /*this.srv.getAllColleguePhotos()
-      .subscribe(collegues => this. colleguesParticipants = collegues);*/
+    this.srv.getAllColleguePhotos()
+      .subscribe(collegues => this. colleguesParticipants = collegues);
   }
 
 }
