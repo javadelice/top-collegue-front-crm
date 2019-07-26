@@ -6,19 +6,25 @@ import { LogginComponent } from './loggin/loggin.component';
 import { RouterModule} from '@angular/router';
 import { ROUTES } from './app.routes';
 import { MenuComponent } from './menu/menu.component';
+import { VotesComponent } from './votes/votes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomComponent } from './custom/custom.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LogginComponent,
-    MenuComponent
+    MenuComponent,
+    VotesComponent,
+    CustomComponent
 
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
