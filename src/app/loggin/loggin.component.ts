@@ -7,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogginComponent implements OnInit {
 
-  loggedInMode: boolean = false;
+  loggedInMode = false;
   constructor() { }
 
   ngOnInit() {
     this.loggedInMode = false;
   }
-  loggedIn(){
+  loggedIn() {
     this.loggedInMode =   !this.loggedInMode;
   }
 
-  connexion(email: string, password: string){
+  connexion(email: string, password: string) {
     /*this.srv.authentifyUser(email, password)
     .subscribe(()=> this.loggedInMode = true);*/
   }
