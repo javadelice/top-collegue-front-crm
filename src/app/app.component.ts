@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { CollegueAuth } from './models/CollegueAuth';
-import { AuthService } from 'src/services/auth.service';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {AuthService} from 'src/app/services/auth.service';
 import {UserConnected} from './models/UserConnected';
 
 @Component({
@@ -11,6 +10,7 @@ import {UserConnected} from './models/UserConnected';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   title = 'top-collegue-front-crm';
   connectedCol: UserConnected;
 
@@ -25,5 +25,8 @@ export class AppComponent implements OnInit {
       }
     );
   }
-
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/loggin']);
+  }
 }

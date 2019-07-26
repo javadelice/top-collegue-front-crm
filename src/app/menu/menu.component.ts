@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {CollegueParticipant} from '../models/CollegueParticipant';
-import { AuthService } from 'src/services/auth.service';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../services/auth.service';
 import {UserConnected} from '../models/UserConnected';
-
 
 
 @Component({
@@ -24,7 +22,6 @@ export class MenuComponent implements OnInit {
       }
     );
   }
-
 
   logout() {
     this.authService.logout();
