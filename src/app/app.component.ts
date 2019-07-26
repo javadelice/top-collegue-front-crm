@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CollegueAuth } from './models/CollegueAuth';
 import { AuthService } from 'src/services/auth.service';
+import {UserConnected} from './models/UserConnected';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { AuthService } from 'src/services/auth.service';
 })
 export class AppComponent implements OnInit {
   title = 'top-collegue-front-crm';
-  connectedCol: CollegueAuth;
+  connectedCol: UserConnected;
 
   constructor(private http: HttpClient, private router: Router, private authService: AuthService) {
   }
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit {
       col => {
         this.connectedCol = col;
       }
-    )
+    );
   }
 
 }

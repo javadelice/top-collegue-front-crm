@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CollegueParticipant} from '../models/CollegueParticipant';
 import { AuthService } from 'src/services/auth.service';
 import { Router } from '@angular/router';
+import {UserConnected} from '../models/UserConnected';
 
 
 
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  connectedCol: CollegueParticipant = new CollegueParticipant();
+  connectedCol: UserConnected = new UserConnected();
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class MenuComponent implements OnInit {
       col => {
         this.connectedCol = col;
       }
-    )
+    );
   }
 
 

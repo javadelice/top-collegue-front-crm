@@ -2,7 +2,7 @@
 
   <div class="container-fluid text-right my-4">
     <div class="col" *ngIf="!connectedCol">
-        {{connectedCol.firstname}} {{connectedCol.lastname | uppercase }}
+        {{connectedCol.firstName}} {{connectedCol.lastName | uppercase }}
         <a (click)="logout()">Se déconnecter</a>
     </div>
   </div>

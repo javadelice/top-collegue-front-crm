@@ -5,7 +5,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {LogginComponent} from './loggin/loggin.component';
 import {RouterModule} from '@angular/router';
 import {ROUTES} from './app.routes';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MenuComponent} from './menu/menu.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpCollegueInterceptor} from './_helpers/http-interceptor';
@@ -25,7 +25,8 @@ import {InscriptionComponent} from './inscription/inscription.component';
     NgbModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: HttpCollegueInterceptor, multi: true }],
