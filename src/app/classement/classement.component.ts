@@ -2,24 +2,24 @@ import { Component, OnInit } from '@angular/core';
 
 interface Collegue {
   name: string;
-  phone: string;
+  photo: string;
   score: number;
 }
 
 const COLLEGUES: Collegue[] = [
   {
     name: 'Johnny',
-    phone: '3525452324',
+    photo: 'http://fr.web.img6.acsta.net/c_215_290/pictures/15/08/12/12/24/179903.jpg',
     score: 123
   },
   {
     name: 'Henri',
-    phone: '0123456789',
+    photo: 'http://fr.web.img6.acsta.net/c_215_290/pictures/15/08/12/12/24/179903.jpg',
     score: 987
   },
   {
     name: 'Antoine',
-    phone: '0264987531',
+    photo: 'http://fr.web.img6.acsta.net/c_215_290/pictures/15/08/12/12/24/179903.jpg',
     score: 456
   },
 ];
