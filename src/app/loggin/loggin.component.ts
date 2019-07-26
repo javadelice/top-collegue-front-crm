@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {CollegueAuth} from '../models/CollegueAuth';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-loggin',
@@ -7,21 +8,19 @@ import {CollegueAuth} from '../models/CollegueAuth';
   styleUrls: ['./loggin.component.css']
 })
 export class LogginComponent implements OnInit {
-
-  loggedInMode: boolean = false;
-  constructor() { }
-
-  @Input() col: CollegueAuth = new CollegueAuth();
+  col: CollegueAuth = new CollegueAuth();
+  loggedInMode = false;
+  constructor(private srvAuth: AuthService) { }
 
   ngOnInit() {
     this.loggedInMode = false;
   }
-  loggedIn(){
+  loggedIn() {
     this.loggedInMode =   !this.loggedInMode;
   }
 
-  connexion(email: string, password: string){
-    /*this.srv.authentifyUser(email, password)
-    .subscribe(()=> this.loggedInMode = true);*/
+  connexion() {
+    this.srvAuth.login(this.col.email, this.col.password)
+    .subscribe(() => this.loggedInMode = true);
   }
 }
